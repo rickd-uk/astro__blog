@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Latest Updates">
+    <div class="latest-container">
+        <h1>Latest Updates</h1>
+        <section class="updates-section">
+            <article class="update-card">
+                <h2>Recent Activity</h2>
+                <div class="date">December 5, 2024</div>
+                <p>Here are our most recent updates and activities...</p>
+            </article>
+
+            <article class="update-card">
+                <h2>New Features Released</h2>
+                <div class="date">December 4, 2024</div>
+                <p>We've just launched several exciting new features...</p>
+            </article>
+
+            <article class="update-card">
+                <h2>Community Highlights</h2>
+                <div class="date">December 3, 2024</div>
+                <p>Check out what our community has been building...</p>
+            </article>
+        </section>
+    </div>
+</Layout>
+
+<style>
+    .latest-container {
+        width: 100%;
+        max-width: 85ch;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: 700;
+        margin: 1em 0;
+        color: rgb(var(--black));
+    }
+
+    .updates-section {
+        display: grid;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+
+    .update-card {
+        background: rgb(var(--gray-100));
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .update-card:hover {
+        transform: translateY(-3px);
+    }
+
+    .update-card h2 {
+        font-size: 1.5em;
+        margin: 0 0 0.5em 0;
+        color: rgb(var(--black));
+    }
+
+    .date {
+        font-size: 0.9em;
+        color: rgb(var(--gray-500));
+        margin-bottom: 1em;
+    }
+
+    .update-card p {
+        line-height: 1.6;
+        color: rgb(var(--gray-800));
+    }
+
+    @media (max-width: 768px) {
+        .latest-container {
+            padding: 1em;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        .update-card {
+            padding: 1rem;
+        }
+    }
+</style>
